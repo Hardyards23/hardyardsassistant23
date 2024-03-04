@@ -1,1 +1,18 @@
+from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="gpt-4-turbo-preview",
+  messages=[
+    {
+      "role": "user",
+      "content": ""
+    }
+  ],
+  temperature=2,
+  max_tokens=4095,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 
